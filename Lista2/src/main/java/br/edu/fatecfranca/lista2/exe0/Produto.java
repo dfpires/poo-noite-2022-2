@@ -12,9 +12,9 @@ public class Produto {
     }
     // cria um método construtor
     public Produto(String nome, int qtde, double preco){
-        this.nome = nome;
-        this.qtde = qtde;
-        this.preco = preco;
+        this.setNome(nome);
+        this.setQtde(qtde);
+        this.setPreco(preco);
     }
     
     public void setNome(String nome){
