@@ -1,7 +1,7 @@
 package br.edu.fatecfranca.lista2.exe0;
 
 // algo abstrato e serve de modelo para seus objetos
-public class Produto {
+public final class Produto {
     private String nome; // tipo de dado é String (uma classe)
     private int qtde; // tipo de dado é int (tipo primitivo)
     private double preco; // tipo de dado é double (tipo primitivo)

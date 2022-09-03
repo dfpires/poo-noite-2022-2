@@ -1,28 +1,22 @@
 
 package br.edu.fatecfranca.lista2.exe0;
 
-public class Rio {
-    public String nome;
-    public double nivel;
-    public boolean poluido; // true - está poluído, false - não está poluido
+public final class Rio {
+   private String nome;
+   private double nivel;
+   private boolean poluido; // true - está poluído, false - não está poluido
 
-    public Rio(){
+   public Rio(){
         
     }
     public Rio(String nome, double nivel, boolean poluido){
-        this.nome = nome;
-        this.nivel = nivel;
-        this.poluido = poluido;
+        this.setNome(nome);
+        this.setNivel(nivel);
+        this.setPoluido(poluido);
     }
     
     public void ensolarar(double x){
-        if (x <= this.nivel){
-            this.nivel -= x;
-            System.out.println("Nível do rio foi diminuido");
-        }
-        else {
-            System.out.println("Nível não pode ser negativo");
-        }
+       this.setNivel(this.nivel - x);
     }
     
     public void chover(double x){
@@ -54,5 +48,32 @@ public class Rio {
         String aux = (this.poluido ? "Está poluido" : "Está limpo");
         return "Nome " + this.nome + " nível " + this.nivel + " Situação " +
                 aux;
+    }
+
+    public void setNome(String nome) {
+        
+       
+        this.nome = nome;
+    }
+
+    public void setNivel(double nivel) {
+        if (nivel >= 0){
+            this.nivel = nivel;
+        }
+        else System.out.println("Nível negativo");
+    }
+
+    public void setPoluido(boolean poluido) {
+        this.poluido = poluido;
+    }
+    
+    public String getNome(){
+        return this.nome;
+    }
+    public double getNivel(){
+        return this.nivel;
+    }
+    public boolean isPoluido(){
+        return this.poluido;
     }
 }
