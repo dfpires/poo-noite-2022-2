@@ -75,5 +75,8 @@ public class Funcionario {
                 ", cargaHoraria=" + cargaHoraria + '}';
     }
     
+    public float calculaSalario(){
+        return this.salario;
+    }
     
 }

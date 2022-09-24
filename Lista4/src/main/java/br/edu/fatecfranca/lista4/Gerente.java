@@ -38,6 +38,10 @@ public class Gerente extends Funcionario {
                super.toString() + '}';
     }
     
+    @Override
+    public float calculaSalario(){
+        return this.salario + this.bonificacao;
+    }
     
     
 }

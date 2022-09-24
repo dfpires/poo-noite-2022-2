@@ -4,6 +4,8 @@
  */
 package br.edu.fatecfranca.lista4;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author danielfacciolo
@@ -33,5 +35,10 @@ public class Diretor extends Funcionario{
                 super.toString() + '}';
     }
     
-    
+    @Override
+    public float calculaSalario(){
+        String lucro = JOptionPane.showInputDialog("Informe lucro da empresa");
+        float lucro2 = Float.parseFloat(lucro);
+        return this.salario + (this.partLucros*lucro2) / 100;
+    }
 }
